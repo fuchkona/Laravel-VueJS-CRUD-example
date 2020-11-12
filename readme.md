@@ -7,6 +7,8 @@
 composer install
 php artisan migrate
 php artisan db:seed
+npm install
+npm run production
 ```
 - Run web server (homestead, docker or php artisan serve)
 - Login as admin
