@@ -59,10 +59,11 @@ class LoginController extends Controller
         }
 
         if ($this->attemptLogin($request)) {
-            if (Auth::user()->state != 'active' ) {
-                Auth::logout();
-                return $this->sendNotActivatedLoginResponse($request);
-            }
+//            FIXME: Disable for now
+//            if (empty(Auth::user()->email_verified_at) ) {
+//                Auth::logout();
+//                return $this->sendNotActivatedLoginResponse($request);
+//            }
 
             return $this->sendLoginResponse($request);
         }
@@ -113,6 +114,6 @@ class LoginController extends Controller
     {
         return redirect()->back()
             ->withInput($request->only($this->username(), 'remember'))
-            ->with('alert-danger', 'Аккаунт не активирован. Для активации свяжитесь с Мариной Коткиной.');
+            ->with('alert-danger', 'Аккаунт не активирован.');
     }
 }

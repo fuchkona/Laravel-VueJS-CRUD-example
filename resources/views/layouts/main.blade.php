@@ -8,13 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }}</title>
-    <link rel="stylesheet" href="{{ mix('css/main.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @stack('styles')
 </head>
 <body>
 {{--Show message if IE < 11--}}
-@include('partials._ie_check')
-@include('partials._download_app')
 <div id="app">
     <div class="container">
         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
@@ -30,7 +28,7 @@
     </div>
 </div>
 @routes
-<script src="{{ mix('js/dist.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 @stack('scripts')
 </body>
 </html>

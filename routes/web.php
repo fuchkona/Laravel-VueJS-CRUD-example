@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth', 'bindings'], 'namespace' => 'App\Http\Controllers'], function ($router) {
+Route::group(['middleware' => ['auth'], 'namespace' => 'App\Http\Controllers'], function ($router) {
 
     Route::get('/', 'MainController@getIndex')->name('index');
 

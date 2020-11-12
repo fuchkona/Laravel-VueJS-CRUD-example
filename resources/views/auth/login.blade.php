@@ -12,7 +12,8 @@
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-medium" name="email" value="{{ old('email') }}" type="email" placeholder="Email адрес" autofocus="">
+                                    <input class="input is-medium" name="email" value="{{ old('email') }}" type="email"
+                                           placeholder="Email адрес" autofocus="">
                                 </div>
                             </div>
                             <div class="field">
@@ -26,16 +27,10 @@
                                     Оставаться в системе
                                 </label>
                             </div>
-                            <button class="button is-block is-link is-fullwidth has-margin-bottom-20" name="commit">Войти</button>
-                            <a href="/register" class="button is-block is-fullwidth has-margin-bottom-5">Предварительная регистрация</a>
-                            <a href="/password/reset" class="button is-block is-fullwidth">Восстановление пароля</a>
+                            <button class="button is-block is-link is-fullwidth m20btm" name="commit">Войти</button>
+                            <a href="/register" class="button is-block is-fullwidth m5btm">Регистрация</a>
                         </form>
                     </div>
-                    <p class="has-text-grey is-size-7 has-margin-bottom-10">
-                        Если у вас возникли проблемы с авторизацией под своей учетной записью на сайте pos-it.ru, то
-                        воспользуйтесь формой "<a href="/password/reset">восстановления пароля</a>".
-                        В случае возниконовения проблем, напишите на почту в <a href="mailto:support@pos-it.ru">техподдержку</a>.
-                    </p>
                 </div>
             </div>
         </div>
